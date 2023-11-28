@@ -2,6 +2,7 @@ import html from "../assets/img/HTML.jpg";
 import css from "../assets/img/CSS.jpg";
 import javascript from "../assets/img/JavaScript.jpg";
 import react from "../assets/img/react.jpg";
+import awsCert from "../assets/img/aws-cert.png";
 import phonecert from "../assets/img/phone-cert.jpg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -44,6 +45,10 @@ export const Skills = () => {
                 <div className="item">
                   <img src={react} alt="" className="carousel-img" />
                   <h5>React-Redux Certified</h5>
+                </div>
+                <div className="item">
+                  <img src={awsCert} alt="" className="carousel-img" />
+                  <h5>AWS Certified Cloud Practitioner</h5>
                 </div>
                 <div className="item">
                   <img src={phonecert} alt="" className="carousel-img" />

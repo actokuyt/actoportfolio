@@ -1,7 +1,14 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-img1.png";
-import projImg2 from "../assets/img/project-img2.png";
+import projImg1 from "../assets/img/projImg1.png";
+import projImg2 from "../assets/img/projImg2.png";
+import projImg4 from "../assets/img/projImg4.png";
+import projImg5 from "../assets/img/projImg5.png";
+import projImg6 from "../assets/img/projImg6.png";
+import projImg7 from "../assets/img/projImg7.png";
+import projImg9 from "../assets/img/projImg9.png";
+import projImg10 from "../assets/img/projImg10.png";
+import projImg11 from "../assets/img/projImg11.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -11,13 +18,55 @@ export const Projects = () => {
       title: "Acto's Portfolio",
       imgUrl: projImg1,
       link: "https://actoportfolio.netlify.app/",
-      github: "https://github.com/actokuyt/acto_portfolio",
+      github: "https://github.com/actokuyt/actoportfolio",
     },
     {
-      title: "Acto-Tech Officiall Website",
+      title: "cs.fyi",
       imgUrl: projImg2,
-      link: "https://actotech.netlify.app/",
-      github: "https://github.com/actokuyt/Acto_Tech_Web",
+      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/csfyi/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/csfyi",
+    },
+    {
+      title: "Loading Animation",
+      imgUrl: projImg4,
+      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/Loading-Animation/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/Loading-Animation",
+    },
+    {
+      title: "Writings",
+      imgUrl: projImg5,
+      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/Writings/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/Writings",
+    },
+    {
+      title: "Calculator App",
+      imgUrl: projImg6,
+      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/myCalculatorApp/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/myCalculatorApp",
+    },
+    {
+      title: "Todo App",
+      imgUrl: projImg7,
+      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/myTodoApp/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/myTodoApp",
+    },
+    {
+      title: "Social Media Accordion",
+      imgUrl: projImg9,
+      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/Social-media-accordion/",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/Social-media-accordion",
+    },
+    {
+      title: "Github Profiler",
+      imgUrl: projImg10,
+      link: "https://actokuyt.github.io/fullstack-roadmap/npm/githubProfiler/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/githubProfiler",
+    },
+    {
+      title: "International Clock",
+      imgUrl: projImg11,
+      link: "https://actokuyt.github.io/fullstack-roadmap/npm/internationalClock/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/internationalClock",
     },
   ];
 

@@ -260,6 +260,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .header-img {
   margin: 60px 0px;
+  /* width: 20em;
+  height: 30em; */
 }
 
 .banner .tagline {
