@@ -9,7 +9,7 @@ import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const textChar =
-    "Hey!, I'm ThankGod, CEO Acto Technologies, a multi talented and introverted tech nerd. Here's a portfolio of my skills, previous and on-going projects.";
+    "Hey!, I'm ThankGod, a multi talented and introverted tech nerd. Here's a portfolio of my skills, previous and on-going projects.";
 
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -39,7 +39,7 @@ export const Banner = () => {
         <source src={bgVid} type="video/mp4" />
       </video>
       <Container className="bg-shade">
-        <Row className="aligh-items-center">
+        <Row className="align-items-center">
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) => (

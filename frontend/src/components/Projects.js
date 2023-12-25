@@ -9,6 +9,7 @@ import projImg7 from "../assets/img/projImg7.png";
 import projImg9 from "../assets/img/projImg9.png";
 import projImg10 from "../assets/img/projImg10.png";
 import projImg11 from "../assets/img/projImg11.png";
+import projImg12 from "../assets/img/projImg12.png";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 
@@ -23,50 +24,56 @@ export const Projects = () => {
     {
       title: "cs.fyi",
       imgUrl: projImg2,
-      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/csfyi/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/csfyi",
+      link: "https://actokuyt.github.io/fullstack-roadmap/html-css/csfyi/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/html-css/csfyi",
     },
     {
       title: "Loading Animation",
       imgUrl: projImg4,
-      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/Loading-Animation/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/Loading-Animation",
+      link: "https://actokuyt.github.io/fullstack-roadmap/html-css/loading-animation/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/html-css/loading-animation",
     },
     {
       title: "Writings",
       imgUrl: projImg5,
-      link: "https://actokuyt.github.io/fullstack-roadmap/HTML_CSS/Writings/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/HTML_CSS/Writings",
+      link: "https://actokuyt.github.io/fullstack-roadmap/html-css/writings/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/html-css/writings",
     },
     {
       title: "Calculator App",
       imgUrl: projImg6,
-      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/myCalculatorApp/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/myCalculatorApp",
+      link: "https://actokuyt.github.io/fullstack-roadmap/javascript/calculator-app/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/javascript/calculator-app",
     },
     {
-      title: "Todo App",
+      title: "Todo App v1",
       imgUrl: projImg7,
-      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/myTodoApp/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/myTodoApp",
+      link: "https://actokuyt.github.io/fullstack-roadmap/javascript/todo-app-v1/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/javascript/todo-app-v1",
     },
     {
       title: "Social Media Accordion",
       imgUrl: projImg9,
-      link: "https://actokuyt.github.io/fullstack-roadmap/JavaScript/Social-media-accordion/",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/JavaScript/Social-media-accordion",
+      link: "https://actokuyt.github.io/fullstack-roadmap/javascript/social-media-accordion/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/javascript/social-media-accordion",
     },
     {
       title: "Github Profiler",
       imgUrl: projImg10,
-      link: "https://actokuyt.github.io/fullstack-roadmap/npm/githubProfiler/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/githubProfiler",
+      link: "https://actokuyt.github.io/fullstack-roadmap/npm/github-profiler/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/github-profiler",
     },
     {
       title: "International Clock",
       imgUrl: projImg11,
-      link: "https://actokuyt.github.io/fullstack-roadmap/npm/internationalClock/index.html",
-      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/internationalClock",
+      link: "https://actokuyt.github.io/fullstack-roadmap/npm/international-clock/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/npm/international-clock",
+    },
+    {
+      title: "Todo App v2",
+      imgUrl: projImg12,
+      link: "https://actokuyt.github.io/fullstack-roadmap/crud/todo-app-v2/frontend/index.html",
+      github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/crud/todo-app-v2",
     },
   ];
 
