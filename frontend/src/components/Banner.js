@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col, Nav } from "react-bootstrap";
-import headerImg from "../assets/img/header-img.png";
+// import headerImg from "../assets/img/header-img.png";
+import facefoto from "../assets/img/facefoto.png";
 import bgVid from "../assets/img/bg-vid.mp4";
 
 import { ArrowDownCircle } from "react-bootstrap-icons";
@@ -9,7 +10,7 @@ import TrackVisibility from "react-on-screen";
 
 export const Banner = () => {
   const textChar =
-    "Hey!, I'm ThankGod, a multi talented and introverted tech nerd. Here's a portfolio of my skills, previous and on-going projects.";
+    "Hey!, I'm ThankGod, a multi-talented and introverted tech nerd. Here's a portfolio of my skills, previous and on-going projects.";
 
   const [text, setText] = useState("");
   const [delta, setDelta] = useState(300 - Math.random() * 100);
@@ -48,11 +49,13 @@ export const Banner = () => {
                     isVisible ? "animate__animated animate__zoomIn" : ""
                   }
                 >
+                  <div className = "facefoto-container" >
                   <img
                     className="header-img"
-                    src={headerImg}
+                    src={facefoto}
                     alt="Header Img"
                   />
+                  </div>
                 </div>
               )}
             </TrackVisibility>
