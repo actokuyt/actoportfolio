@@ -72,7 +72,7 @@ export const Projects = () => {
     {
       title: "Todo App v2",
       imgUrl: projImg12,
-      link: "https://actokuyt.github.io/fullstack-roadmap/crud/todo-app-v2/frontend/index.html",
+      link: "https://actokuyt.github.io/fullstack-roadmap/crud/todo-app-v2/index.html",
       github: "https://github.com/actokuyt/fullstack-roadmap/tree/master/crud/todo-app-v2",
     },
   ];
