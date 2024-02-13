@@ -1,4 +1,5 @@
 import { useState } from "react";
+// const cors = require("cors");
 import { Col, Row } from "react-bootstrap";
 import Swal from "sweetalert2";
 import axios from "axios";
@@ -22,7 +23,7 @@ export const Newsletter = () => {
     const jsonData = JSON.stringify(payload);
 
     try {
-      await axios.post("https://actoportfolio-server.onrender.com/newsletter", jsonData, {
+      await axios.post("https://backend-service-h1x1.onrender.com/newsletter", jsonData, {
         headers: {
           "Content-Type": "application/json",
         },

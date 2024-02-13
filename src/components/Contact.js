@@ -46,7 +46,7 @@ export const Contact = () => {
         process.env.REACT_APP_EMAILJS_SERVICE_ID,
         process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         payload,
-        process.env.REACT_APP_EMAILJS_USER_ID
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       );
       resetForm();
       Swal.fire({
@@ -59,6 +59,7 @@ export const Contact = () => {
         timerProgressBar: true,
       });
     } catch (error) {
+      console.error(error);
       Swal.fire({
         toast: true,
         position: "bottom",
