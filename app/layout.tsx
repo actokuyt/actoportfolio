@@ -1,8 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Newsreader } from "next/font/google";
 import "./globals.css";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
 
-const inter = Inter({ subsets: ["latin"] });
+const newsreader = Newsreader({ 
+  // weight: ["400", "700"],
+  subsets: ["latin"]
+ });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,7 +20,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={newsreader.className}>
+      <AppRouterCacheProvider options={{ enableCssLayer: true }} >
+        {children}
+      </AppRouterCacheProvider>
+      </body>
     </html>
   );
 }
