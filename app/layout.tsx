@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import { Newsreader } from "next/font/google";
 import "./globals.css";
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import LabelBottomNavigation from "../ui/navbars";
 
-const newsreader = Newsreader({ 
-  // weight: ["400", "700"],
-  subsets: ["latin"]
- });
+const newsreader = Newsreader({
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,9 +21,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={newsreader.className}>
-      <AppRouterCacheProvider options={{ enableCssLayer: true }} >
-        {children}
-      </AppRouterCacheProvider>
+        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+          {children}
+          <div className="fixed bottom-0 max-w-full text-gray-700 border-t-2">
+            <LabelBottomNavigation />
+          </div>
+        </AppRouterCacheProvider>
       </body>
     </html>
   );
