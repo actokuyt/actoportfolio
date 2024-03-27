@@ -1,6 +1,3 @@
-import { Javascript } from "@mui/icons-material";
-import React from "react";
-
 export const certs = [
   {
     img: "/certs/oasis-cert.png",

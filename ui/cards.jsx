@@ -3,13 +3,13 @@
 import * as React from "react";
 import Link from "next/link";
 import Card from "@mui/material/Card";
-import CardActions from '@mui/material/CardActions';
+import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Modal from "@mui/joy/Modal";
 import ModalClose from "@mui/joy/ModalClose";
 import Sheet from "@mui/joy/Sheet";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { Transition } from "react-transition-group";
 import { Newsreader } from "next/font/google";
@@ -57,7 +57,7 @@ export function CertificationsCard() {
     return age;
   }
   return (
-    <div>
+    <div className="md:grid md:grid-cols-3 md:gap-4 md:w-3/4 md:mx-auto ">
       {certs.map((cert) => {
         return (
           <Card sx={{ maxWidth: 345 }} key={cert.title} className="mb-4">
@@ -140,7 +140,9 @@ export function WebDevProjectsCard() {
   }
 
   return (
-    <div className={newsreader.className}>
+    <div
+      className={`${newsreader.className} md:mx-8 md:grid md:grid-cols-3 md:gap-4`}
+    >
       {webDevProjects.map((project) => {
         return (
           <Card sx={{ maxWidth: 345 }} key={project.title} className="mb-4">
@@ -170,7 +172,7 @@ export function WebDevProjectsCard() {
             slotProps={{
               backdrop: {
                 sx: {
-                  display: `none`,
+                  // display: `none`,
                 },
               },
             }}
@@ -185,51 +187,74 @@ export function WebDevProjectsCard() {
             <Sheet
               variant="outlined"
               sx={{
-                maxWidth: 500,
+                // maxWidth: 500,
                 borderRadius: "md",
                 p: 3,
                 boxShadow: "lg",
                 overflow: "scroll",
               }}
-              className="h-[95vh] w-[98%] mx-auto bg-blue-100 mt-24"
+              className="h-[95vh] w-[98%] mx-auto bg-blue-100 mt-24 md:w-[70%] md:h-[60%] md:mt-0"
             >
               <ModalClose
                 component={ArrowBackIcon}
                 variant="plain"
                 sx={{ m: 1 }}
-                className="sticky left-[10px] mx-[5px] my-[10px] p-[5px]"
+                className="sticky left-[10px] mx-[5px] my-[10px] p-[5px] md:hidden"
               />
               {webDevProjects.map((project) => {
                 if (project.title == modalTriggerId) {
                   return (
-                    <div key={project.title} className="mx-2 pb-[40px]">
-                      <Card className="w-[100%] mx-auto" >
+                    <div
+                      key={project.title}
+                      className="mx-2 pb-[40px] md:m-8 md:grid md:grid-cols-2 md:gap-8 md:content-center md:pt-[30px]"
+                    >
+                      <Card className="w-[100%] mx-auto ">
                         <CardMedia
                           component="img"
                           alt={project.title}
                           height="140"
                           image={project.img}
                         />
-                        <CardContent className="mx-2 mb-2" >
-                        <h1 className="text-xl mt-2 ">{project.title}</h1>
-                        <h4 className="text-sm mt-2 ">{`${
-                          project.startDate
-                        } - ${
-                          project.endDate ? `${project.endDate}` : "Present"
-                        }`}</h4>
+                        <CardContent className="mx-2 mb-2">
+                          <h1 className="text-xl mt-2 ">{project.title}</h1>
+                          <h4 className="text-sm mt-2 ">{`${
+                            project.startDate
+                          } - ${
+                            project.endDate ? `${project.endDate}` : "Present"
+                          }`}</h4>
                         </CardContent>
                         <CardActions>
-                          <Button component={Link} href={project.demo} size="small">Demo</Button>
-                          <Button component={Link} href={project.repo} size="small">Source</Button>
+                          <Button
+                            component={Link}
+                            href={project.demo}
+                            size="small"
+                          >
+                            Demo
+                          </Button>
+                          <Button
+                            component={Link}
+                            href={project.repo}
+                            size="small"
+                          >
+                            Source
+                          </Button>
                         </CardActions>
                       </Card>
-                      <h1 className="text-center text-l font-semibold mt-4" >Tech Stack</h1>
-                      <ul className="flex flex-wrap " >
-                        {project.stack.map((tech)=>{
-                          return <li key={tech} className="mr-2" >{tech}</li>
-                        })}
-                      </ul>
-                      <p className="mt-4" >{project.desc}</p>
+                      <div className="">
+                        <h1 className="text-center text-l font-semibold mt-4">
+                          Tech Stack
+                        </h1>
+                        <ul className="flex flex-wrap ">
+                          {project.stack.map((tech) => {
+                            return (
+                              <li key={tech} className="mr-2">
+                                {tech}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                        <p className="mt-4">{project.desc}</p>
+                      </div>
                     </div>
                   );
                 }
@@ -261,7 +286,7 @@ export function CvProjectsCard() {
   };
 
   const nodeRef = React.useRef(null);
-  
+
   function handleModalTrigger(triggerId) {
     setModalTriggerId(triggerId);
     setOpen(true);
@@ -273,7 +298,9 @@ export function CvProjectsCard() {
   }
 
   return (
-    <div className={newsreader.className}>
+    <div
+      className={`${newsreader.className} md:mx-8 md:grid md:grid-cols-3 md:gap-4`}
+    >
       {cvProjects.map((project) => {
         return (
           <Card sx={{ maxWidth: 345 }} key={project.title} className="mb-4">
@@ -296,79 +323,102 @@ export function CvProjectsCard() {
       })}
       <Transition nodeRef={nodeRef} in={open} timeout={duration}>
         {(state) => (
-            <Modal
-              open={!["exited", "exiting"].includes(state)}
-              onClose={handleModalClose}
-              ref={nodeRef}
-              slotProps={{
-                backdrop: {
-                  sx: {
-                    display: `none`,
-                  },
+          <Modal
+            open={!["exited", "exiting"].includes(state)}
+            onClose={handleModalClose}
+            ref={nodeRef}
+            slotProps={{
+              backdrop: {
+                sx: {
+                  // display: `none`,
                 },
-              }}
+              },
+            }}
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              ...defaultStyle,
+              ...transitionStyles[state],
+            }}
+          >
+            <Sheet
+              variant="outlined"
               sx={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                ...defaultStyle,
-                ...transitionStyles[state],
+                // maxWidth: 500,
+                borderRadius: "md",
+                p: 3,
+                boxShadow: "lg",
+                overflow: "scroll",
               }}
+              className="h-[95vh] w-[98%] mx-auto bg-blue-100 mt-24 md:w-[70%] md:h-[65%] md:mt-0"
             >
-              <Sheet
-                variant="outlined"
-                sx={{
-                  maxWidth: 500,
-                  borderRadius: "md",
-                  p: 3,
-                  boxShadow: "lg",
-                  overflow: "scroll",
-                }}
-                className="h-[95vh] w-[98%] mx-auto bg-blue-100 mt-24"
-              >
-                <ModalClose
-                  component={ArrowBackIcon}
-                  variant="plain"
-                  sx={{ m: 1 }}
-                  className="sticky left-[10px] mx-[5px] my-[10px] p-[5px]"
-                />
-                {cvProjects.map((project) => {
-                  if (project.title == modalTriggerId) {
-                    return (
-                      <div key={project.title} className="mx-2 pb-[40px]">
-                      <Card className="w-[100%] mx-auto" >
+              <ModalClose
+                component={ArrowBackIcon}
+                variant="plain"
+                sx={{ m: 1 }}
+                className="sticky left-[10px] mx-[5px] my-[10px] p-[5px] md:hidden"
+              />
+              {cvProjects.map((project) => {
+                if (project.title == modalTriggerId) {
+                  return (
+                    <div
+                      key={project.title}
+                      className="mx-2 pb-[40px] md:m-8 md:grid md:grid-cols-2 md:gap-8 md:content-center md:p-0"
+                    >
+                      <Card className="w-[100%] mx-auto">
                         <CardMedia
                           component="img"
                           alt={project.title}
                           height="140"
                           image={project.img}
                         />
-                        <CardContent className="mx-2 mb-2" >
-                        <h1 className="text-xl mt-2 ">{project.title}</h1>
-                        <h4 className="text-sm mt-2 ">{`${
-                          project.startDate
-                        } - ${
-                          project.endDate ? `${project.endDate}` : "Present"
-                        }`}</h4>
+                        <CardContent className="mx-2 mb-2">
+                          <h1 className="text-xl mt-2 ">{project.title}</h1>
+                          <h4 className="text-sm mt-2 ">{`${
+                            project.startDate
+                          } - ${
+                            project.endDate ? `${project.endDate}` : "Present"
+                          }`}</h4>
                         </CardContent>
                         <CardActions>
-                          <Button component={Link} href={project.demo} size="small">Demo</Button>
-                          <Button component={Link} href={project.repo} size="small">Source</Button>
+                          <Button
+                            component={Link}
+                            href={project.demo}
+                            size="small"
+                          >
+                            Demo
+                          </Button>
+                          <Button
+                            component={Link}
+                            href={project.repo}
+                            size="small"
+                          >
+                            Source
+                          </Button>
                         </CardActions>
                       </Card>
-                      <h1 className="text-center text-l font-semibold mt-4" >Tech Stack</h1>
-                      <ul className="flex flex-wrap " >
-                        {project.stack.map((tech)=>{
-                          return <li key={tech} className="mr-2" >{tech}</li>
-                        })}
-                      </ul>
-                      <p className="mt-4" >{project.desc}</p>
+                      <div>
+                        <h1 className="text-center text-l font-semibold mt-4">
+                          Tech Stack
+                        </h1>
+                        <ul className="flex flex-wrap ">
+                          {project.stack.map((tech) => {
+                            return (
+                              <li key={tech} className="mr-2">
+                                {tech}
+                              </li>
+                            );
+                          })}
+                        </ul>
+                        <p className="mt-4">{project.desc}</p>
+                      </div>
                     </div>
-                    );
-                  }
-                })}
-              </Sheet>
-            </Modal>
+                  );
+                }
+              })}
+            </Sheet>
+          </Modal>
         )}
       </Transition>
     </div>
@@ -377,7 +427,7 @@ export function CvProjectsCard() {
 
 export function BlogArticlesCard() {
   return (
-    <div>
+    <div className="md:grid md:grid-cols-3 md:gap-4 md:w-3/4 md:mx-auto " >
       {blogArticles.map((article) => {
         return (
           <Card sx={{ maxWidth: 345 }} key={article.title} className="mb-4">
